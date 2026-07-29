@@ -14,6 +14,9 @@
       --accent: #2f7d73;
       --accent-2: #b75f2a;
       --soft: #e7f1ec;
+      --visited: #a75220;
+      --visited-soft: #fff0df;
+      --visited-line: #edc29a;
       --warn: #fff1d6;
       --shadow: 0 10px 30px rgba(55, 43, 31, .09);
     }
@@ -204,6 +207,23 @@
       white-space: nowrap;
     }
 
+    .map.actual-visited {
+      background: var(--visited-soft);
+      border-color: var(--visited-line);
+      color: var(--visited);
+      box-shadow: inset 0 0 0 1px rgba(167, 82, 32, .08);
+    }
+
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
     ul, ol { padding-left: 22px; }
 
     .two-col {
@@ -254,6 +274,7 @@
       <a href="#day3">Day 3</a>
       <a href="#day4">Day 4</a>
       <a href="#checklist">清單</a>
+      <a href="#actual">實際紀錄</a>
       <a href="#refs">參考附件</a>
     </div>
   </nav>
@@ -282,6 +303,10 @@
           <div>回台中</div>
           <p>飯店泳池、返程。吃飽、上廁所、補水後再開長途。</p>
         </div>
+      </div>
+      <div class="legend">
+        <span class="map actual-visited">實際有去過</span>
+        <span class="map">候選 / 原規劃</span>
       </div>
     </section>
 
@@ -523,6 +548,106 @@
       </ol>
     </section>
 
+    <section id="actual">
+        <h2>2026 實際行程紀錄：明年參考</h2>
+        <h3>回訪優先清單</h3>
+        <table>
+          <thead><tr><th>類型</th><th>地點</th><th>實際心得</th></tr></thead>
+          <tbody>
+            <tr><td>午餐 / 海景</td><td><a class="map" href="https://www.google.com/maps/search/?api=1&query=%E6%9E%8B%E5%AF%AE%E6%A4%B0%E5%80%91%E6%B5%B7%E6%99%AF%E9%A4%90%E5%BB%B3%20Pi%20coconut" target="_blank" rel="noopener">枋寮椰們海景餐廳 Pi coconut</a></td><td>餐點不錯，窗外風景漂亮。</td></tr>
+            <tr><td>飲料</td><td><a class="map" href="https://www.google.com/maps/search/?api=1&query=%E5%8F%AE%E5%93%A5%E8%8C%B6%E9%A3%B2%20%E6%B1%A0%E4%B8%8A%E5%BA%97" target="_blank" rel="noopener">叮哥茶飲池上店</a></td><td>好喝，可回購。</td></tr>
+            <tr><td>滷味</td><td><a class="map" href="https://www.google.com/maps/search/?api=1&query=%E5%B0%8F%E6%9D%91%E6%BB%B7%E5%91%B3%20%E6%B1%A0%E4%B8%8A" target="_blank" rel="noopener">小村滷味</a></td><td>好吃，可回購。</td></tr>
+            <tr><td>午餐</td><td><a class="map" href="https://www.google.com/maps/search/?api=1&query=%E5%AE%8F%E6%98%8C%E5%AE%A2%E5%AE%B6%E8%8F%9C%E9%A4%A8%20%E9%97%9C%E5%B1%B1" target="_blank" rel="noopener">宏昌客家菜館</a></td><td>好吃、親子友善，下次再訪。</td></tr>
+            <tr><td>住宿</td><td><a class="map" href="https://www.google.com/maps/search/?api=1&query=%E5%A4%A7%E6%96%B9%E4%BE%86%E5%AF%8C%E8%8E%8A%E5%9C%92%20%E9%B9%BF%E9%87%8E" target="_blank" rel="noopener">大方來富莊園</a></td><td>不錯，明年可回訪。</td></tr>
+            <tr><td>親子景點</td><td><a class="map" href="https://www.google.com/maps/search/?api=1&query=%E5%9C%8B%E7%AB%8B%E8%87%BA%E7%81%A3%E5%8F%B2%E5%89%8D%E6%96%87%E5%8C%96%E5%8D%9A%E7%89%A9%E9%A4%A8" target="_blank" rel="noopener">國立臺灣史前文化博物館</a></td><td>遛小孩不錯。</td></tr>
+            <tr><td>午餐 / 麵食</td><td><a class="map" href="https://www.google.com/maps/search/?api=1&query=%E6%A6%95%E6%A8%B9%E4%B8%8B%E7%B1%B3%E8%8B%94%E7%9B%AE%20%E5%B0%8F%E6%BB%BF%E9%9B%A8%E7%94%9F%20%E5%8F%B0%E6%9D%B1" target="_blank" rel="noopener">榕樹下米苔目小滿雨生</a></td><td>好吃，下次可再訪。</td></tr>
+            <tr><td>住宿</td><td><a class="map" href="https://www.google.com/maps/search/?api=1&query=THE%20GAYA%20HOTEL%20%E5%8F%B0%E6%9D%B1" target="_blank" rel="noopener">THE GAYA HOTEL</a></td><td>還行，可回訪。</td></tr>
+            <tr><td>飲料</td><td><a class="map" href="https://www.google.com/maps/search/?api=1&query=%E9%9A%B1%E5%B1%B1%E8%8C%B6%E9%81%93%20%E6%BC%A2%E9%99%BD%E5%BA%97%20%E5%8F%B0%E6%9D%B1" target="_blank" rel="noopener">隱山茶道 漢陽店</a></td><td>好喝，可回訪。</td></tr>
+            <tr><td>返程午餐</td><td><a class="map" href="https://www.google.com/maps/search/?api=1&query=%E9%98%AE%E5%AE%B6%E8%8C%B6%E5%9D%8A%20%E6%9E%8B%E5%AF%AE" target="_blank" rel="noopener">阮家茶坊</a></td><td>不錯，可回訪。</td></tr>
+          </tbody>
+        </table>
+
+        <h3>去過一次即可</h3>
+        <table>
+          <thead><tr><th>類型</th><th>地點</th><th>實際心得</th></tr></thead>
+          <tbody>
+            <tr><td>便當</td><td><a class="map" href="https://www.google.com/maps/search/?api=1&query=%E5%85%A8%E7%BE%8E%E8%A1%8C%E6%B1%A0%E4%B8%8A%E9%90%B5%E8%B7%AF%E4%BE%BF%E7%95%B6" target="_blank" rel="noopener">全美行池上鐵路便當</a></td><td>嘗試過一次就好。</td></tr>
+            <tr><td>景點</td><td><a class="map" href="https://www.google.com/maps/search/?api=1&query=%E5%A4%A7%E5%9D%A1%E6%B1%A0" target="_blank" rel="noopener">大坡池</a></td><td>蠻無聊，去過一次就好。</td></tr>
+            <tr><td>景點 / 茶文化</td><td><a class="map" href="https://www.google.com/maps/search/?api=1&query=%E6%96%B0%E5%85%83%E6%98%8C%E7%B4%85%E8%8C%B6%E7%94%A2%E6%A5%AD%E6%96%87%E5%8C%96%E9%A4%A8" target="_blank" rel="noopener">新元昌紅茶產業文化館</a></td><td>去過一次就好。</td></tr>
+            <tr><td>晚餐</td><td><a class="map" href="https://www.google.com/maps/search/?api=1&query=%E6%AD%A3%E4%B8%80%E8%8C%B6%E5%9C%92%E7%94%B0%E5%AA%BD%E5%AA%BD%E5%82%85%E5%A7%90%E9%A2%A8%E5%91%B3%E9%A4%90" target="_blank" rel="noopener">正一茶園田媽媽傅姐風味餐</a></td><td>普普，下次可選別家晚餐。</td></tr>
+          </tbody>
+        </table>
+
+        <h3>下次避開或降低期待</h3>
+        <table>
+          <thead><tr><th>類型</th><th>地點</th><th>實際心得</th></tr></thead>
+          <tbody>
+            <tr><td>晚餐</td><td><a class="map" href="https://www.google.com/maps/search/?api=1&query=%E7%83%8F%E9%BE%8D%E9%99%A2%E5%AE%B6%E5%BA%AD%E9%A3%9F%E5%A0%82%20%E5%8F%B0%E6%9D%B1" target="_blank" rel="noopener">烏龍院家庭食堂</a></td><td>不好吃。</td></tr>
+            <tr><td>點心</td><td><a class="map" href="https://www.google.com/maps/search/?api=1&query=%E5%A4%A7%E6%B1%A0%E8%B1%86%E7%9A%AE%E5%BA%97%20%E6%B1%A0%E4%B8%8A" target="_blank" rel="noopener">大池豆皮店</a></td><td>好吃，但環境蒼蠅多。</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Day 1 實際紀錄</h3>
+        <table>
+          <thead><tr><th>時段</th><th>實際安排</th><th>明年備註</th></tr></thead>
+          <tbody>
+            <tr><td>午餐</td><td>枋寮椰們海景餐廳 Pi coconut</td><td>餐點不錯，窗外風景漂亮。</td></tr>
+            <tr><td>南迴景點</td><td>多良車站</td><td>已去過，可視天氣與孩子狀況決定是否再排。</td></tr>
+            <tr><td>住宿</td><td>莊稼熟了 3 民宿</td><td>實際入住。</td></tr>
+            <tr><td>下午</td><td>伯朗大道租車</td><td>租車不錯，可保留。</td></tr>
+            <tr><td>晚餐</td><td>全美行池上鐵路便當</td><td>嘗試過一次就好。</td></tr>
+            <tr><td>飲料 / 宵夜</td><td>叮哥茶飲池上店、小村滷味</td><td>兩間都可回購。</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Day 2 實際紀錄</h3>
+        <table>
+          <thead><tr><th>時段</th><th>實際安排</th><th>明年備註</th></tr></thead>
+          <tbody>
+            <tr><td>早餐</td><td>民宿早餐</td><td>好吃。</td></tr>
+            <tr><td>點心</td><td>大池豆皮店</td><td>好吃，但環境蒼蠅多。</td></tr>
+            <tr><td>景點</td><td>大坡池</td><td>蠻無聊，去過一次就好。</td></tr>
+            <tr><td>購物</td><td>米國學校、關山永全花生酥</td><td>適合買伴手禮。</td></tr>
+            <tr><td>午餐</td><td>宏昌客家菜館</td><td>好吃、親子友善，下次再訪。</td></tr>
+            <tr><td>景點</td><td>新元昌紅茶產業文化館</td><td>去過一次就好。</td></tr>
+            <tr><td>住宿</td><td>大方來富莊園</td><td>不錯，明年回訪。</td></tr>
+            <tr><td>晚餐</td><td>正一茶園田媽媽傅姐風味餐</td><td>普普，下次可選別家晚餐。</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Day 3 實際紀錄</h3>
+        <table>
+          <thead><tr><th>時段</th><th>實際安排</th><th>明年備註</th></tr></thead>
+          <tbody>
+            <tr><td>清晨</td><td>熱氣球取消</td><td>颱風影響取消，明年再訪。</td></tr>
+            <tr><td>早餐</td><td>民宿早餐</td><td>實際用餐。</td></tr>
+            <tr><td>景點</td><td>國立臺灣史前文化博物館</td><td>遛小孩不錯。</td></tr>
+            <tr><td>午餐</td><td>榕樹下米苔目小滿雨生</td><td>好吃，下次可再訪。</td></tr>
+            <tr><td>購物</td><td>蕃薯伯、連成記</td><td>分別買地瓜酥、芋頭酥。</td></tr>
+            <tr><td>住宿</td><td>THE GAYA HOTEL</td><td>還行，可回訪。</td></tr>
+            <tr><td>晚餐</td><td>烏龍院家庭食堂</td><td>不好吃。</td></tr>
+            <tr><td>餐後</td><td>鐵花新聚落散步</td><td>可保留短散步。</td></tr>
+          </tbody>
+        </table>
+        <p>下次預計去：
+          <a class="map" href="https://www.google.com/maps/search/?api=1&query=%E9%BB%83%E8%A8%98%E8%94%A5%E6%B2%B9%E9%A4%85%20%E5%BE%AE%E5%85%89%E5%BA%97%20%E5%8F%B0%E6%9D%B1" target="_blank" rel="noopener">黃記蔥油餅《微光店》</a>
+          <a class="map" href="https://www.google.com/maps/search/?api=1&query=%E5%8F%B0%E6%9D%B1%E7%A5%9E%E8%BE%B2%E9%9D%92%E8%8D%89%E8%8C%B6" target="_blank" rel="noopener">台東神農青草茶</a>
+          <a class="map" href="https://www.google.com/maps/search/?api=1&query=%E8%8A%B1%E5%BC%8F%E8%94%A5%E9%A4%85%20%E5%8F%B0%E6%9D%B1" target="_blank" rel="noopener">花式蔥餅</a>
+        </p>
+
+        <h3>Day 4 實際紀錄</h3>
+        <table>
+          <thead><tr><th>時段</th><th>實際安排</th><th>明年備註</th></tr></thead>
+          <tbody>
+            <tr><td>早餐</td><td>飯店早餐</td><td>實際用餐。</td></tr>
+            <tr><td>飲料</td><td>隱山茶道 漢陽店</td><td>好喝，可回訪。</td></tr>
+            <tr><td>返程購物</td><td>美鳳釋迦</td><td>可作返程伴手禮點。</td></tr>
+            <tr><td>午餐</td><td>阮家茶坊</td><td>不錯，可回訪。</td></tr>
+            <tr><td>休息站</td><td>關廟休息站、南投休息站</td><td>返程實際停靠。</td></tr>
+          </tbody>
+        </table>
+    </section>
+
     <section id="refs">
       <h2>參考附件：Threads 台東推薦整理</h2>
       <h3>台東市</h3>
@@ -579,5 +704,40 @@
   <footer class="wrap footer">
     來源參考：台東觀光旅遊網、臺灣國際熱氣球嘉年華官方網站、國立臺灣史前文化博物館、THE GAYA HOTEL、中央氣象署、沿路午餐點與台東市區親子午餐資料。Google Maps 連結使用搜尋連結，出發前仍建議確認營業時間與導航結果。
   </footer>
+  <script>
+    (() => {
+      const actualVisitedTerms = [
+        "枋寮椰們海景餐廳",
+        "多良車站",
+        "莊稼熟了 3",
+        "伯朗大道",
+        "阮家茶坊",
+        "全美行池上鐵路便當",
+        "叮哥茶飲池上店",
+        "小村滷味",
+        "大池豆皮店",
+        "大坡池",
+        "米國學校",
+        "宏昌客家菜館",
+        "新元昌紅茶產業文化館",
+        "大方來富莊園",
+        "正一茶園",
+        "國立臺灣史前文化博物館",
+        "史前館",
+        "榕樹下米苔目",
+        "THE GAYA",
+        "隱山茶道",
+        "鐵花新聚落",
+        "烏龍院家庭食堂"
+      ];
+
+      document.querySelectorAll("a.map").forEach((link) => {
+        const label = link.textContent.replace(/\s+/g, " ").trim();
+        if (actualVisitedTerms.some((term) => label.includes(term))) {
+          link.classList.add("actual-visited");
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
